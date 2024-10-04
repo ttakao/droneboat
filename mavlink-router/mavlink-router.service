@@ -1,0 +1,13 @@
+[Unit]
+Description=Mavlink Router Service
+After=multi-user.target
+
+[Service]
+User=tsukasa
+Type=simple
+ExecStart=/usr/bin/mavlink-routerd
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

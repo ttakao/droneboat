@@ -1,0 +1,13 @@
+[Unit]
+Description = MJPG Streamer service
+After = multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/tsukasa/mjpg-streamer/mjpg-streamer-experimental
+ExecStart=/home/tsukasa/http-streamer.sh
+TieoutStopSec=10
+StandardOutput=null
+
+[Install]
+WantedBy = multi-user.target

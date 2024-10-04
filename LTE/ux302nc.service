@@ -1,0 +1,10 @@
+[Unit]
+Description = UX302NC Service
+StopWhenUnneeded=yes
+
+[Service]
+ExecStart = /usr/bin/wvdial
+TimeoutStartSec = 300
+
+[Install]
+WantedBy = multi-user.target
